@@ -1,0 +1,72 @@
+Home = Heading, Heading (Image), Introduction, About Me, Skills, Contact (Form)
+Works = Title, Year, Tag, Image, Content
+Post = Title, Date, Tag, Content
+
+SLOGAN AWAL : 
+    I'm Muhammad Hafizhuddin, a designer
+    Hello, I'm Muhammad Hafizhuddin. a Graphic Designer
+
+ISI :
+Currently I am the Design Director at Excellis Interactive.
+
+Sometimes I post in-progress design work over on Dribbble. If you follow me on Twitter you can read my ramblings about design, books, music, and life (amongst other things). I'm also on LinkedIn if that's your thing.
+
+Seorang User Interface Designer, saat ini tinggal di kota Surakarta yang banyak sekali makanan enak. Suka melakukan eksplorasi design yang minimalis dan memiliki fungsionalitas yang baik.
+
+Bisa menghabiskan waktu berjam-jam setiap hari nya untuk melakukan eksplorasi design. Kalian dapat melihat beberapa eksplorasi design saya di Dribbble.
+
+Saya juga suka menulis di Medium, kebanyakan tulisan saya membahas tentang bagaimana memulai menjadi UI Designer, beberapa tips dasar untuk membuat UI Design lebih menarik, dan bisnis design.
+
+Aktif di Twitter membahas hal hal seputar industri design dan jika kamu punya pertanyaan jangan ragu untuk mention saya di twitter, pasti akan jadi obrolan yang menarik.
+
+My work is mainly focused on third-dimension modeling, texturing and rendering. I like exploring the creatures with a touch of dark surrealism for characters and production.
+
+Now I’m an interactive media design student in Istanbul ⏤ currently freelancing and seeking internship opportunities.
+
+
+Database :
+table POSTS [ 
+    int = id -> primary key    
+    string = title    
+    string = slug -> unique
+    int = category_id -> foreign key
+    text = excerpt
+    text = body
+]
+
+table WORKS [
+    int = id -> primary key
+    string = title    
+    string = slug -> unique
+    int = year_id -> foreign key
+    int = category
+    file = image
+    text = excerpt
+    text = body
+]
+
+table CATEGORIES [
+    int = id -> primary key
+    string = name -> unique
+    string = slug -> unique 
+]
+
+table YEAR [
+    int = id -> primary key
+    string = year -> unique
+    string = slug -> unique
+]
+
+
+Category::create([
+'name' => 'Programming',
+'slug' => 'programming'
+])
+
+Post::create([
+'title' => 'Judul Ketiga',
+'slug' => 'judul-ketiga',
+'category_id' => 2,
+'excerpt' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
+'body' => '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. t has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p> <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>'
+]) 

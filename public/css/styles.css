@@ -1,0 +1,79 @@
+:root {
+    --white: #f3f3f3;
+    --yellow: #dfa622;
+    --black: #292929;
+    --black-2: #535353;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Heebo", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--black);
+}
+
+nav {
+    color: var(--black-2);
+}
+p {
+    color: var(--black-2);
+    /* text-align: justify; */
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-2);
+}
+
+a:hover {
+    color: var(--black);
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h4:hover {
+    color: var(--black-2);
+}
+#about p {
+    text-align: justify;
+}
+
+#content p {
+    text-align: justify !important;
+    /* color: white; */
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
